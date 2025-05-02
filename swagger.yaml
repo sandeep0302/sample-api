@@ -1,0 +1,34 @@
+openapi:3.0.0
+info:
+title:Sandeep API
+version 1.0.0
+description:A Simple API that returns Sandeep's introduction
+
+path:
+/v1/sample/intro:
+post: 
+summary: GEt Sandeep's intro
+description:Returns name, age, profession, and more
+responses:
+'200':
+ description:A successful response
+ content:
+ application/json:
+  schema:
+    type:object
+    properties:
+      name:
+      type:string
+      example:Sandeep
+      age:
+      type:integer
+      example:30
+      profession:
+      type:string
+      example:Software Engineer
+      city:
+      type:string
+      example:Hyderabad
+      country:
+      type:string
+      example:India

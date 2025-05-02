@@ -1,5 +1,10 @@
 const express = require('express');
 const logger= require('./logger');
+const swaggerUi = require('swagger-ui-express');
+const YAML = require('yamljs');
+
+const swaggerDocument = YAML.load('./swagger.yaml');
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 const app = express();
 app.use(express.json());
